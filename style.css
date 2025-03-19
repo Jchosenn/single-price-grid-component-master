@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  background-color: hsl(204, 43%, 93%);
+}
+.card-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  font-family: "Karla", sans-serif;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+header {
+  grid-column: span 2 / span 2;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 7px 7px 0 0;
+}
+header h1 {
+  color: hsl(179, 62%, 43%);
+}
+header h2 {
+  color: hsl(71, 73%, 54%);
+}
+header p {
+  color: hsl(218, 22%, 67%);
+  margin-top: 20px;
+  max-width: 550px;
+}
+.section-one {
+  grid-row-start: 2;
+  background-color: hsl(179, 62%, 43%);
+  padding: 5px 40px 20px 40px;
+  color: hsl(204, 43%, 100%);
+  border-bottom-left-radius: 7px;
+}
+.section-one h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.text-holder {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.section-one h4 {
+  font-weight: 200;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+span {
+  font-size: 35px;
+  font-weight: 700;
+}
+.section-one p {
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.section-two {
+  grid-row-start: 2;
+  background-color: hsl(179, 52%, 53%);
+  padding: 5px 40px 20px 40px;
+  border-end-end-radius: 7px;
+  color: white;
+}
+a {
+  color: hsl(204, 43%, 100%);
+  font-weight: 500;
+  padding: 15px 90px;
+  text-decoration: none;
+  box-shadow: 1px 1px 10px rgb(151, 147, 147);
+  background-color: hsl(71, 73%, 54%);
+  border-radius: 7px;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  color: hsl(204, 43%, 93%);
+  list-style: none;
+  padding: 2px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card-holder {
+    max-width: 1440px;
+  }
+}
+@media screen and (max-width: 568px) {
+    .card-holder{
+padding: 50px 20px;
+    }
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 40px 10px 20px 10px;
+    }
+    header {
+        grid-column: span 1 / span 1;
+        align-items: center;
+    }
+    header h2{
+        font-size: 20px;
+    }
+  
+    .section-one{
+        grid-row-start: auto;
+        border-radius: 0;
+        padding-bottom: 50px;
+    }
+    .section-two{
+        grid-row-start: auto;
+        border-radius: 0 0 7px 7px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    header h1, h2{
+        font-size: 20px;
+    }
+    header p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .card-holder{
+        padding: 70px 20px;
+            }
+ 
+    .section-one, header, .section-two{
+        padding: 10px 20px 40px 30px;
+
+    }
+}
+ 
+
